@@ -1,0 +1,21 @@
+name: tricare_codes
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.7
+  - numpy
+  - matplotlib
+  - pandas
+  - pillow
+  - scikit-learn
+  - scipy
+  - cudatoolkit=11.0
+  - tensorflow
+  - tensorboardx
+  - pytorch=1.7.0
+  - torchvision=0.8.0
+  - pip
+  - pip:
+    - opencv-python
+
