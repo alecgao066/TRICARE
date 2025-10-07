@@ -1,6 +1,6 @@
 # Deep-learning triage of 3D pathology datasets for comprehensive and efficient pathologist assessments
 
-This repository contains code for training **CARP3D**, a deep learning triage framework that identifies high-risk 2D cross sections within large 3D pathology datasets to enable time-efficient pathologist evaluation. **CARP3D** leverages context from a subset of neighboring depth levels, achieving better performance than models that learn solely from isolated 2D levels.
+This repository contains code for training **TRICARE**, a deep learning triage framework that identifies high-risk 2D cross sections within large 3D pathology datasets to enable time-efficient pathologist evaluation. **TRICARE** leverages context from a subset of neighboring depth levels, achieving better performance than models that learn solely from isolated 2D levels.
 
 ## Table of Contents
 - [Install](#Install)
@@ -23,7 +23,7 @@ conda env create -f environment.yml
 Activate virtual environment
 
 ```bash
-conda activate carp3d_codes
+conda activate tricare_codes
 ```
 
 ---
