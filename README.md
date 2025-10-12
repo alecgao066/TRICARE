@@ -1,6 +1,6 @@
 # Deep-learning triage of 3D pathology datasets for comprehensive and efficient pathologist assessments
 
-This repository contains code for training **TRICARE**, a deep learning triage framework that identifies high-risk 2D cross sections within large 3D pathology datasets to enable time-efficient pathologist evaluation. **TRICARE** leverages context from a subset of neighboring depth levels, achieving better performance than models that learn solely from isolated 2D levels.
+This repository contains code for training **TRICARE**, a deep learning triage framework that identifies high-risk 2D cross sections within large 3D pathology datasets to enable time-efficient pathologist evaluation. **TRICARE** leverages context from a subset of neighboring depth levels, achieving better performance than models that learn solely from isolated 2D levels. Please refer to our [preprint](https://www.biorxiv.org/content/10.1101/2025.07.20.665804v1) for more details.
 
 ## Table of Contents
 - [Install](#Install)
@@ -14,7 +14,7 @@ This repository contains code for training **TRICARE**, a deep learning triage f
 
 ## Install
 
-Install the required packages using:
+Install the required packages using the following commands. This process may take a few minutes to complete.
 
 ```bash
 conda env create -f environment.yml
@@ -118,6 +118,6 @@ The prostate model used in this work was developed using our publicly available 
 
 To extract the levels annotated by pathologists, run the `extract_levels.py` script using the data provided in `dataset_csv/full_prostate_labels.csv`. Then follow the [falsecolor-python algorithm](https://github.com/serrob23/falsecolor) to render H\&E-like images from fluorescence data.
 
-Once preprocessing is complete, you can proceed to train the model using all images from the prostate development cohort.
+Once preprocessing is complete, you can proceed to train the model using all images from the prostate development cohort. The training time for the entire prostate cohort, using the hardware and hyperparameters specified in our preprint, takes a few hours.
 
 Due to the large size of the datasets (tens of terabytes), we are working with platforms such as the NIH TCIA to host and publicly release the remaining datasets and associated clinical data following the publication of the manuscript.
