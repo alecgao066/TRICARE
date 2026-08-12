@@ -6,7 +6,7 @@ import numpy as np
 
 
 """
-CARP3D L->D Depth Aggregation Linear Attention.
+TRICARE L->D Depth Aggregation Linear Attention.
 """
 class Depth_Attn_Linear(nn.Module):
 
@@ -28,7 +28,7 @@ class Depth_Attn_Linear(nn.Module):
 
     
 """
-CARP3D L->D Depth Aggregation Non-gated Attention.
+TRICARE L->D Depth Aggregation Non-gated Attention.
 """
 class Depth_Attn_Net(nn.Module):
 
@@ -126,7 +126,7 @@ class ABMIL(nn.Module):
 
 
 """
-CARP3D Naive
+TRICARE Naive
 """
 class CARP3D_Naive(ABMIL):
     def __init__(self, dropout=True, n_classes=2, feat_dim=512):
@@ -180,7 +180,7 @@ class CARP3D_Naive(ABMIL):
     
 
 """
-CARP3D L->D with averaging depth aggregation
+TRICARE L->D with averaging depth aggregation
 """
 class CARP3D_LD_Ave(ABMIL):
     def __init__(self, dropout=True, n_classes=2, feat_dim=512):
@@ -255,7 +255,7 @@ class CARP3D_LD_Ave(ABMIL):
     
 
 """
-CARP3D L->D with linear attention depth aggregation
+TRICARE L->D with linear attention depth aggregation
 """
 class CARP3D_LD_Linear_Attn(ABMIL):
     def __init__(self, dropout=True, n_classes=2, feat_dim=512):
@@ -336,7 +336,7 @@ class CARP3D_LD_Linear_Attn(ABMIL):
     
 
 """
-CARP3D L->D with non-gated attention depth aggregation
+TRICARE L->D with non-gated attention depth aggregation
 """
 class CARP3D_LD(ABMIL):
     def __init__(self, dropout=True, n_classes=2, feat_dim=512):
@@ -529,7 +529,7 @@ class CARP3D_LD_RNN(ABMIL):
     
 
 """
-CARP3D D->L with non-gated attention depth aggregation
+TRICARE D->L with non-gated attention depth aggregation
 """
 class CARP3D_DL(nn.Module):
     def __init__(self, dropout=True, n_classes=2, feat_dim=512):

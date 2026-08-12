@@ -175,7 +175,7 @@ class Generic_WSI_Classification_Dataset(Dataset):
 			settings.update({'cls_ids' : self.patient_cls_ids, 'samples': len(self.patient_data['case_id'])})
 		else:
 			settings.update({'cls_ids' : self.slide_cls_ids, 'samples': len(self.slide_data)})
-		print(leave_one)
+
 		if leave_one is True:
 			self.split_gen = generate_split_loo(**settings) # Comment for new early stopping
 		else:
@@ -211,10 +211,10 @@ class Generic_WSI_Classification_Dataset(Dataset):
 			df_slice = self.slide_data[mask].reset_index(drop=True)
 			if split_key =='train':
 				split = Generic_Split(df_slice, data_dir=self.data_dir, agg_range=self.agg_range,
-			  agg_gap=self.agg_gap, num_classes=self.num_classes, train_flag=True)
+			  agg_gap=self.agg_gap, adj_gap=self.adj_gap, num_classes=self.num_classes, train_flag=True)
 			else:
 				split = Generic_Split(df_slice, data_dir=self.data_dir, agg_range=self.agg_range,
-			  agg_gap=self.agg_gap, num_classes=self.num_classes)
+			  agg_gap=self.agg_gap, adj_gap=self.adj_gap, num_classes=self.num_classes)
 		else:
 			split = None
 		

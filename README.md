@@ -49,7 +49,7 @@ python create_splits_seq.py \
 
 --k: Number of folds.
 
---leave_one_out: If set, performs leave-one-out validation.
+--leave_one_out: If set, performs leave-one-out validation. `--k` should then be set to the number of patients (one fold per held-out patient).
 
 ### Step 2: Train the Model
 
@@ -86,7 +86,7 @@ CUDA_VISIBLE_DEVICES=1 python main.py \
 
 --k: Number of folds.
 
---leave_one_out: Use leave-one-out split.
+--leave_one_out: Use leave-one-out split. `--k` should equal the number of patients when this is set (see Step 1).
 
 --agg_range: Maximum range of levels above and below the target depth for 2.5D aggregation. For example, with --agg_range 3, the model aggregates features from up to 3 levels above and 3 below the target level.
 

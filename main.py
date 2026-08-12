@@ -71,7 +71,7 @@ parser.add_argument('--lr', type=float, default=1e-4,
 parser.add_argument('--label_frac', type=float, default=1.0,
                     help='fraction of training labels (default: 1.0)')
 parser.add_argument('--leave_one_out', action='store_true', default=False,
-                     help='disable leave one out cross validation with no early stopping')
+                     help='enable leave-one-out cross validation (no held-out validation set, so early stopping should be disabled)')
 parser.add_argument('--reg', type=float, default=1e-5,
                     help='weight decay (default: 1e-5)')
 parser.add_argument('--seed', type=int, default=1, 
